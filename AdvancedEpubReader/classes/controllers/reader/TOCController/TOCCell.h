@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommonTVCell.h"
+#import "CommonTVReaderCell.h"
 
 @class NavPoint;
 
-@interface TOCCell : CommonTVCell
+@interface TOCCell : CommonTVReaderCell
 
 @property (strong, nonnull, nonatomic) NavPoint *navPoint;
 

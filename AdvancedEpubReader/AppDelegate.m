@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "UIColor+MJColors.h"
-#import "UIFont+MJFonts.h"
+#import "UIColor+MJReaderColors.h"
+#import "UIFont+MJReaderFonts.h"
 
 @interface AppDelegate ()
 

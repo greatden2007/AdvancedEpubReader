@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (MJColors)
+@interface UIColor (MJReaderColors)
 
 + (UIColor *)mainPinkColor;
 + (UIColor *)menuBackgroundRedColor;

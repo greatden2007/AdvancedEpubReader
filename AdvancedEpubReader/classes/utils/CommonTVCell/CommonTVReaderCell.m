@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Trinity Digital. All rights reserved.
 //
 
-#import "CommonTVCell.h"
+#import "CommonTVReaderCell.h"
 
-@implementation CommonTVCell
+@implementation CommonTVReaderCell
 
 + (NSString *)className {
     return NSStringFromClass([self class]);

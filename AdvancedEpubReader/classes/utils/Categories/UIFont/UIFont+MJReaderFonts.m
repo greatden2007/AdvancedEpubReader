@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Trinity Digital. All rights reserved.
 //
 
-#import "UIFont+MJFonts.h"
+#import "UIFont+MJReaderFonts.h"
 /**
  *  Все шрифты, которые юзаем именуются так:
  MuseoSansCyrl-500
@@ -16,7 +16,7 @@
  MuseoSansCyrl-100
  */
 
-@implementation UIFont (MJFonts)
+@implementation UIFont (MJReaderFonts)
 
 + (UIFont *)MuseoSansCyrlFontWithPostfix:(NSInteger)postfix withSize:(CGFloat)size {
     if(!postfix) {

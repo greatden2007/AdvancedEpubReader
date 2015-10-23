@@ -10,8 +10,8 @@
 		3B41193497E9302C5666EEE8 /* libPods-AdvancedEpubReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC79CBF39A60092C1C901F /* libPods-AdvancedEpubReaderTests.a */; };
 		5F53E36149F0C374CF6AF058 /* libPods-AdvancedEpubReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58CAFFE9A424531ED8633 /* libPods-AdvancedEpubReader.a */; };
 		922FA0D71BD8E53200F21228 /* TOCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0D61BD8E53200F21228 /* TOCController.m */; settings = {ASSET_TAGS = (); }; };
-		922FA0E01BD8EA4500F21228 /* UIColor+MJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0DF1BD8EA4500F21228 /* UIColor+MJColors.m */; settings = {ASSET_TAGS = (); }; };
-		922FA0E31BD8EA4E00F21228 /* UIFont+MJFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0E21BD8EA4E00F21228 /* UIFont+MJFonts.m */; settings = {ASSET_TAGS = (); }; };
+		922FA0E01BD8EA4500F21228 /* UIColor+MJReaderColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0DF1BD8EA4500F21228 /* UIColor+MJReaderColors.m */; settings = {ASSET_TAGS = (); }; };
+		922FA0E31BD8EA4E00F21228 /* UIFont+MJReaderFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0E21BD8EA4E00F21228 /* UIFont+MJReaderFonts.m */; settings = {ASSET_TAGS = (); }; };
 		922FA0EA1BD8EAC800F21228 /* MuseoSansCyrl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 922FA0E51BD8EAC800F21228 /* MuseoSansCyrl.otf */; settings = {ASSET_TAGS = (); }; };
 		922FA0EB1BD8EAC800F21228 /* MuseoSansCyrl_0.otf in Resources */ = {isa = PBXBuildFile; fileRef = 922FA0E61BD8EAC800F21228 /* MuseoSansCyrl_0.otf */; settings = {ASSET_TAGS = (); }; };
 		922FA0EC1BD8EAC800F21228 /* MuseoSansCyrl_1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 922FA0E71BD8EAC800F21228 /* MuseoSansCyrl_1.otf */; settings = {ASSET_TAGS = (); }; };
@@ -20,7 +20,7 @@
 		922FA0F11BD8F89200F21228 /* TopMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0F01BD8F89200F21228 /* TopMenuController.m */; settings = {ASSET_TAGS = (); }; };
 		922FA0F41BD8F8B600F21228 /* BottomMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0F31BD8F8B600F21228 /* BottomMenuController.m */; settings = {ASSET_TAGS = (); }; };
 		922FA0F81BD901BF00F21228 /* TOCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0F71BD901BF00F21228 /* TOCCell.m */; settings = {ASSET_TAGS = (); }; };
-		922FA0FC1BD9020600F21228 /* CommonTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0FB1BD9020600F21228 /* CommonTVCell.m */; settings = {ASSET_TAGS = (); }; };
+		922FA0FC1BD9020600F21228 /* CommonTVReaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0FB1BD9020600F21228 /* CommonTVReaderCell.m */; settings = {ASSET_TAGS = (); }; };
 		922FA0FF1BD923E100F21228 /* Epub+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FA0FE1BD923E100F21228 /* Epub+Extensions.m */; settings = {ASSET_TAGS = (); }; };
 		929768801BBD3A5E00AF63F4 /* XMLProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9297687F1BBD3A5E00AF63F4 /* XMLProcessor.m */; settings = {ASSET_TAGS = (); }; };
 		92CE89B21BBD4D88000A7F6F /* EpubUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE89B11BBD4D88000A7F6F /* EpubUnarchiver.m */; settings = {ASSET_TAGS = (); }; };
@@ -37,7 +37,7 @@
 		92D3A50F1BBEBC6F000C06F9 /* test.epub in Resources */ = {isa = PBXBuildFile; fileRef = 92D3A50D1BBEBC6F000C06F9 /* test.epub */; settings = {ASSET_TAGS = (); }; };
 		92EC35541BBC3D7A004C95D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC35531BBC3D7A004C95D0 /* main.m */; };
 		92EC35571BBC3D7A004C95D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC35561BBC3D7A004C95D0 /* AppDelegate.m */; };
-		92EC355D1BBC3D7B004C95D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EC355B1BBC3D7B004C95D0 /* Main.storyboard */; };
+		92EC355D1BBC3D7B004C95D0 /* Reader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EC355B1BBC3D7B004C95D0 /* Reader.storyboard */; };
 		92EC355F1BBC3D7B004C95D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92EC355E1BBC3D7B004C95D0 /* Assets.xcassets */; };
 		92EC35621BBC3D7B004C95D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EC35601BBC3D7B004C95D0 /* LaunchScreen.storyboard */; };
 		92EC356D1BBC3D7B004C95D0 /* AdvancedEpubReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC356C1BBC3D7B004C95D0 /* AdvancedEpubReaderTests.m */; };
@@ -72,10 +72,10 @@
 		84DC79CBF39A60092C1C901F /* libPods-AdvancedEpubReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedEpubReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FA0D51BD8E53200F21228 /* TOCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCController.h; sourceTree = "<group>"; };
 		922FA0D61BD8E53200F21228 /* TOCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCController.m; sourceTree = "<group>"; };
-		922FA0DE1BD8EA4500F21228 /* UIColor+MJColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MJColors.h"; sourceTree = "<group>"; };
-		922FA0DF1BD8EA4500F21228 /* UIColor+MJColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MJColors.m"; sourceTree = "<group>"; };
-		922FA0E11BD8EA4E00F21228 /* UIFont+MJFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MJFonts.h"; sourceTree = "<group>"; };
-		922FA0E21BD8EA4E00F21228 /* UIFont+MJFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MJFonts.m"; sourceTree = "<group>"; };
+		922FA0DE1BD8EA4500F21228 /* UIColor+MJReaderColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MJReaderColors.h"; sourceTree = "<group>"; };
+		922FA0DF1BD8EA4500F21228 /* UIColor+MJReaderColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MJReaderColors.m"; sourceTree = "<group>"; };
+		922FA0E11BD8EA4E00F21228 /* UIFont+MJReaderFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MJReaderFonts.h"; sourceTree = "<group>"; };
+		922FA0E21BD8EA4E00F21228 /* UIFont+MJReaderFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MJReaderFonts.m"; sourceTree = "<group>"; };
 		922FA0E51BD8EAC800F21228 /* MuseoSansCyrl.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSansCyrl.otf; sourceTree = "<group>"; };
 		922FA0E61BD8EAC800F21228 /* MuseoSansCyrl_0.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSansCyrl_0.otf; sourceTree = "<group>"; };
 		922FA0E71BD8EAC800F21228 /* MuseoSansCyrl_1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSansCyrl_1.otf; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 		922FA0F51BD8F8F600F21228 /* TableOfContentsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableOfContentsDelegate.h; sourceTree = "<group>"; };
 		922FA0F61BD901BF00F21228 /* TOCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCCell.h; sourceTree = "<group>"; };
 		922FA0F71BD901BF00F21228 /* TOCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCCell.m; sourceTree = "<group>"; };
-		922FA0FA1BD9020600F21228 /* CommonTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTVCell.h; sourceTree = "<group>"; };
-		922FA0FB1BD9020600F21228 /* CommonTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTVCell.m; sourceTree = "<group>"; };
+		922FA0FA1BD9020600F21228 /* CommonTVReaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTVReaderCell.h; sourceTree = "<group>"; };
+		922FA0FB1BD9020600F21228 /* CommonTVReaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTVReaderCell.m; sourceTree = "<group>"; };
 		922FA0FD1BD923E100F21228 /* Epub+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Epub+Extensions.h"; sourceTree = "<group>"; };
 		922FA0FE1BD923E100F21228 /* Epub+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Epub+Extensions.m"; sourceTree = "<group>"; };
 		9297687E1BBD3A5E00AF63F4 /* XMLProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLProcessor.h; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		92EC35531BBC3D7A004C95D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92EC35551BBC3D7A004C95D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92EC35561BBC3D7A004C95D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		92EC355C1BBC3D7B004C95D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92EC355C1BBC3D7B004C95D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reader.storyboard; sourceTree = "<group>"; };
 		92EC355E1BBC3D7B004C95D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92EC35611BBC3D7B004C95D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92EC35631BBC3D7B004C95D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 		922FA0D91BD8E9E100F21228 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				922FA0DE1BD8EA4500F21228 /* UIColor+MJColors.h */,
-				922FA0DF1BD8EA4500F21228 /* UIColor+MJColors.m */,
+				922FA0DE1BD8EA4500F21228 /* UIColor+MJReaderColors.h */,
+				922FA0DF1BD8EA4500F21228 /* UIColor+MJReaderColors.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -209,8 +209,8 @@
 		922FA0DD1BD8EA2800F21228 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
-				922FA0E11BD8EA4E00F21228 /* UIFont+MJFonts.h */,
-				922FA0E21BD8EA4E00F21228 /* UIFont+MJFonts.m */,
+				922FA0E11BD8EA4E00F21228 /* UIFont+MJReaderFonts.h */,
+				922FA0E21BD8EA4E00F21228 /* UIFont+MJReaderFonts.m */,
 			);
 			path = UIFont;
 			sourceTree = "<group>";
@@ -230,8 +230,8 @@
 		922FA0F91BD901E400F21228 /* CommonTVCell */ = {
 			isa = PBXGroup;
 			children = (
-				922FA0FA1BD9020600F21228 /* CommonTVCell.h */,
-				922FA0FB1BD9020600F21228 /* CommonTVCell.m */,
+				922FA0FA1BD9020600F21228 /* CommonTVReaderCell.h */,
+				922FA0FB1BD9020600F21228 /* CommonTVReaderCell.m */,
 			);
 			path = CommonTVCell;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 				92EC35851BBC3EAA004C95D0 /* classes */,
 				92EC35551BBC3D7A004C95D0 /* AppDelegate.h */,
 				92EC35561BBC3D7A004C95D0 /* AppDelegate.m */,
-				92EC355B1BBC3D7B004C95D0 /* Main.storyboard */,
+				92EC355B1BBC3D7B004C95D0 /* Reader.storyboard */,
 				92EC355E1BBC3D7B004C95D0 /* Assets.xcassets */,
 				92EC35601BBC3D7B004C95D0 /* LaunchScreen.storyboard */,
 				92EC35631BBC3D7B004C95D0 /* Info.plist */,
@@ -573,7 +573,7 @@
 				922FA0EA1BD8EAC800F21228 /* MuseoSansCyrl.otf in Resources */,
 				922FA0EB1BD8EAC800F21228 /* MuseoSansCyrl_0.otf in Resources */,
 				922FA0EE1BD8EAC800F21228 /* MuseoSansCyrl_3.otf in Resources */,
-				92EC355D1BBC3D7B004C95D0 /* Main.storyboard in Resources */,
+				92EC355D1BBC3D7B004C95D0 /* Reader.storyboard in Resources */,
 				92D3A50E1BBEBC6F000C06F9 /* test.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922FA0E01BD8EA4500F21228 /* UIColor+MJColors.m in Sources */,
+				922FA0E01BD8EA4500F21228 /* UIColor+MJReaderColors.m in Sources */,
 				92CE89C21BBD797D000A7F6F /* Epub.m in Sources */,
 				92EC358B1BBC3EFB004C95D0 /* ReaderController.m in Sources */,
 				922FA0F41BD8F8B600F21228 /* BottomMenuController.m in Sources */,
@@ -674,12 +674,12 @@
 				92EC35931BBC3FC8004C95D0 /* FileLoader.m in Sources */,
 				922FA0D71BD8E53200F21228 /* TOCController.m in Sources */,
 				92CE89B71BBD6E0C000A7F6F /* XMLDictionary.m in Sources */,
-				922FA0FC1BD9020600F21228 /* CommonTVCell.m in Sources */,
+				922FA0FC1BD9020600F21228 /* CommonTVReaderCell.m in Sources */,
 				92F80EEE1BC291FE002B40B2 /* PageView.m in Sources */,
 				922FA0F11BD8F89200F21228 /* TopMenuController.m in Sources */,
 				92EC35541BBC3D7A004C95D0 /* main.m in Sources */,
 				92CE89B21BBD4D88000A7F6F /* EpubUnarchiver.m in Sources */,
-				922FA0E31BD8EA4E00F21228 /* UIFont+MJFonts.m in Sources */,
+				922FA0E31BD8EA4E00F21228 /* UIFont+MJReaderFonts.m in Sources */,
 				929768801BBD3A5E00AF63F4 /* XMLProcessor.m in Sources */,
 				92F80EF21BC2961A002B40B2 /* PageViewController.m in Sources */,
 				922FA0FF1BD923E100F21228 /* Epub+Extensions.m in Sources */,
@@ -723,12 +723,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		92EC355B1BBC3D7B004C95D0 /* Main.storyboard */ = {
+		92EC355B1BBC3D7B004C95D0 /* Reader.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				92EC355C1BBC3D7B004C95D0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Reader.storyboard;
 			sourceTree = "<group>";
 		};
 		92EC35601BBC3D7B004C95D0 /* LaunchScreen.storyboard */ = {

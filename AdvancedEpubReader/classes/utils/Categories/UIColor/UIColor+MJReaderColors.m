@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Trinity Digital. All rights reserved.
 //
 
-#import "UIColor+MJColors.h"
+#import "UIColor+MJReaderColors.h"
 
-@implementation UIColor (MJColors)
+@implementation UIColor (MJReaderColors)
 
 + (UIColor *)mainPinkColor {
     return [UIColor colorWithRed:255.0f / 255.0f green:144.0f / 255.0f blue:149.0f / 255.0f alpha:1.0f];

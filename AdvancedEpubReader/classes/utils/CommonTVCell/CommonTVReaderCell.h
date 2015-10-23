@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CommonTVCell : UITableViewCell
+@interface CommonTVReaderCell : UITableViewCell
 
 + (UINib *)nib;
 + (NSString *)className;
