@@ -6,6 +6,6 @@ Pod::Spec.new do |spec|
   spec.summary          = 'Epub reader for iOS'
   spec.source           = { :git => 'https://github.com/greatden2007/AdvancedEpubReader.git', :branch => 'master' }
   spec.requires_arc     = true
-  s.resources = ["Base.lproj/*.storyboard"]
-  s.source_files  = 'Classes/**/*.{h,m}'
+  s.resources = ["AdvancedEpubReader/Base.lproj/*.storyboard"]
+  s.source_files  = 'AdvancedEpubReader/Classes/**/*.{h,m}'
 end
