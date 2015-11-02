@@ -8,9 +8,13 @@
 
 #import "BottomMenuController.h"
 
+#import "SliderNavigationDelegate.h"
+#import "MainBookInfoDelegate.h"
+
 @interface BottomMenuController ()
 
 @property (strong, nonatomic) IBOutlet UISlider *slider;
+@property (strong, nonatomic) IBOutlet UILabel *pageCounter;
 
 @end
 
@@ -20,12 +24,29 @@
     [super viewDidLoad];
     [self.slider setThumbImage:[UIImage imageNamed:@"thumb"] forState:UIControlStateNormal];
     [self.slider setThumbImage:[UIImage imageNamed:@"thumb"] forState:UIControlStateHighlighted];
+    [self.slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)sliderValueChanged:(UISlider *)slider {
+    [self.readerController showPageAtPercent:slider.value];
+    [self updateLabel];
+}
+
+- (void)updatePercent:(float)percent {
+    [self.slider setValue:percent animated:YES];
+    [self updateLabel];
+}
+
+- (void)updateLabel {
+    NSInteger totalPages = [self.readerController spine].count;
+    NSInteger currentPage = self.slider.value * totalPages;
+    self.pageCounter.text = [NSString stringWithFormat:@"%@ из %@", @(currentPage + 1), @(totalPages)];
 }
 
 /*

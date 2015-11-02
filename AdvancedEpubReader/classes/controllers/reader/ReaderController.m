@@ -22,9 +22,11 @@
 #import "BottomMenuController.h"
 
 #import "TableOfContentsDelegate.h"
+#import "SliderNavigationDelegate.h"
+#import "MainBookInfoDelegate.h"
 #import "NavPoint.h"
 
-@interface ReaderController () <UIWebViewDelegate, UIGestureRecognizerDelegate, TableOfContentsDelegate>
+@interface ReaderController () <UIWebViewDelegate, UIGestureRecognizerDelegate, TableOfContentsDelegate, SliderNavigationDelegate, MainBookInfoDelegate>
 
 @property NSInteger currentSpinePosition;
 @property (strong) Epub *epub;
@@ -32,6 +34,9 @@
 @property (strong) PageViewController *pageVC;
 @property (strong, nonatomic) IBOutlet UIView *topMenu;
 @property (strong, nonatomic) IBOutlet UIView *bottomMenu;
+
+@property (strong, nonatomic) BottomMenuController *bottomMenuController;
+@property (strong, nonatomic) TopMenuController *topMenuController;
 
 @end
 
@@ -47,7 +52,7 @@
     }
     self.epub = [self loadEpubNamed:@"test"];
     
-    self.pageVC = [[PageViewController alloc] initWithSpine:self.epub.spine index:0 presenter:self.view];
+    self.pageVC = [[PageViewController alloc] initWithSpine:self.epub.spine index:0 presenter:self];
     
     [self.view bringSubviewToFront:self.topMenu];
     [self.view bringSubviewToFront:self.bottomMenu];
@@ -90,6 +95,13 @@
 }
 
 - (void)tap:(UITapGestureRecognizer *)tapReco {
+    
+    // не скрывать меню, если на него нажать
+    CGPoint touchPoint = [tapReco locationInView:tapReco.view];
+    if (CGRectContainsPoint(self.topMenu.frame, touchPoint) || CGRectContainsPoint(self.bottomMenu.frame, touchPoint)) {
+        return;
+    }
+    
     [UIView animateWithDuration:0.25 animations:^{
         // стоит не забывать, что alpha -- это (cg)float.
         // сравнение float с int может закончиться не так, как ожидалось
@@ -129,6 +141,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     id dvc = segue.destinationViewController;
     if ([dvc isKindOfClass:[TopMenuController class]]) {
+        self.topMenuController = dvc;
+        [dvc setReaderController:self];
+    }
+    if ([dvc isKindOfClass:[BottomMenuController class]]) {
+        self.bottomMenuController = dvc;
         [dvc setReaderController:self];
     }
 
@@ -148,8 +165,30 @@
 }
 
 - (void)showPageAtIndex:(NSInteger)pageIndex {
-    for (NavPoint *navPoint in self.epub.tocRoot.childs)
+//    for (NavPoint *navPoint in self.epub.tocRoot.childs)
     [self.pageVC loadPageFromSpine:self.epub.spine AtIndex:pageIndex];
+}
+
+#pragma mark - SliderNavigationDelegate
+//-------------------------------------------------
+// SliderNavigationDelegate
+//-------------------------------------------------
+
+- (void)showPageAtPercent:(float)percent {
+    [self.pageVC loadAtPercent:percent];
+}
+
+- (void)updatePercent:(float)percent {
+    [self.bottomMenuController updatePercent:percent];
+}
+
+#pragma mark - Main Info Delegate
+//-------------------------------------------------
+// Main Info Delegate
+//-------------------------------------------------
+
+- (NSArray *)spine {
+    return self.epub.spine;
 }
 
 

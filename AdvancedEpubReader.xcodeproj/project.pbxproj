@@ -127,6 +127,8 @@
 		92F80EED1BC291FE002B40B2 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		92F80EF01BC2961A002B40B2 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		92F80EF11BC2961A002B40B2 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		92F8DB261BE20F8A00EB5376 /* SliderNavigationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderNavigationDelegate.h; sourceTree = "<group>"; };
+		92F8DB271BE226F800EB5376 /* MainBookInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainBookInfoDelegate.h; sourceTree = "<group>"; };
 		A3C58CAFFE9A424531ED8633 /* libPods-AdvancedEpubReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedEpubReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2633925EDB7580C8FE7CCE /* Pods-AdvancedEpubReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedEpubReaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedEpubReaderTests/Pods-AdvancedEpubReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 			children = (
 				922FA0F21BD8F8B600F21228 /* BottomMenuController.h */,
 				922FA0F31BD8F8B600F21228 /* BottomMenuController.m */,
+				92F8DB261BE20F8A00EB5376 /* SliderNavigationDelegate.h */,
 			);
 			path = BottomMenuController;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				92F80EEF1BC29602002B40B2 /* PageViewController */,
 				92F80EEB1BC291EA002B40B2 /* PageView */,
 				92EC35891BBC3EFB004C95D0 /* ReaderController.h */,
+				92F8DB271BE226F800EB5376 /* MainBookInfoDelegate.h */,
 				92EC358A1BBC3EFB004C95D0 /* ReaderController.m */,
 			);
 			path = reader;

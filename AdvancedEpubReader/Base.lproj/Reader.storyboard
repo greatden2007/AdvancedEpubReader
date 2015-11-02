@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MuseoSansCyrl_0.otf">
+            <string>MuseoSansCyrl-300</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Reader Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -28,11 +33,11 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-R7-c6Z">
-                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="cTt-dS-Q6z"/>
+                                    <constraint firstAttribute="height" constant="50" id="cTt-dS-Q6z"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="YSS-4c-nAD" kind="embed" id="PHA-Y2-KP4"/>
@@ -245,11 +250,11 @@
                         <viewControllerLayoutGuide type="bottom" id="QH0-6e-Pkk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yck-SP-PNa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="22c-dM-8Ji">
-                                <rect key="frame" x="10" y="8" width="300" height="31"/>
+                                <rect key="frame" x="10" y="0.0" width="300" height="31"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nGD-HG-gn3"/>
@@ -263,16 +268,32 @@
                                     </mask>
                                 </variation>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-ee-O0d">
+                                <rect key="frame" x="141" y="30" width="39" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="MuseoSansCyrl-300" family="Museo Sans Cyrl" pointSize="16"/>
+                                <color key="textColor" red="0.23265916109085083" green="0.23286521434783936" blue="0.23269107937812805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="22c-dM-8Ji" firstAttribute="centerY" secondItem="Yck-SP-PNa" secondAttribute="centerY" id="9lS-Md-zL8"/>
+                            <constraint firstItem="22c-dM-8Ji" firstAttribute="top" secondItem="sib-zK-eSG" secondAttribute="bottom" id="AtF-b4-u2X"/>
+                            <constraint firstItem="lUQ-ee-O0d" firstAttribute="top" secondItem="22c-dM-8Ji" secondAttribute="bottom" id="Fa1-5X-IQL"/>
+                            <constraint firstItem="lUQ-ee-O0d" firstAttribute="centerX" secondItem="22c-dM-8Ji" secondAttribute="centerX" id="Sgn-K4-hcf"/>
                             <constraint firstAttribute="trailing" secondItem="22c-dM-8Ji" secondAttribute="trailing" constant="12" id="dvc-Fa-DWJ"/>
                             <constraint firstItem="22c-dM-8Ji" firstAttribute="leading" secondItem="Yck-SP-PNa" secondAttribute="leading" constant="12" id="rla-dp-tuh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9lS-Md-zL8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="pageCounter" destination="lUQ-ee-O0d" id="Mbg-d8-6dY"/>
                         <outlet property="slider" destination="22c-dM-8Ji" id="2qC-nC-Jv7"/>
                     </connections>
                 </viewController>

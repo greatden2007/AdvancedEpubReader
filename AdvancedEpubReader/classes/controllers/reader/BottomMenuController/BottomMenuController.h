@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SliderNavigationDelegate, MainBookInfoDelegate;
+
 @interface BottomMenuController : UIViewController
+
+@property (weak) UIViewController <SliderNavigationDelegate, MainBookInfoDelegate> *readerController;
+
+- (void)updatePercent:(float)percent;
 
 @end

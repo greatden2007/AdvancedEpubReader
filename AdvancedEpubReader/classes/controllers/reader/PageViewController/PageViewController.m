@@ -10,36 +10,41 @@
 
 #import "PageView.h"
 
+#import "TableOfContentsDelegate.h"
+#import "SliderNavigationDelegate.h"
+
 static const float kPageTurnTime = 0.25;
 
 @interface PageViewController ()
 
 @property PageView *pageView;
 @property (strong) NSArray *spine;
+@property (weak) UIViewController <TableOfContentsDelegate, SliderNavigationDelegate> *presenter;
 
 @end
 
 @implementation PageViewController
 
-- (instancetype)initWithSpine:(NSArray *)spine index:(NSInteger)index presenter:(UIView *)presenter {
+- (instancetype)initWithSpine:(NSArray *)spine index:(NSInteger)index presenter:(UIViewController <TableOfContentsDelegate, SliderNavigationDelegate> *)presenter {
     self = [super init];
     if(self) {
         
-        self.spine = spine;
+        _spine = spine;
+        _presenter = presenter;
         
-        self.pageView = [[PageView alloc] initWithFrame:presenter.frame spine:spine index:index];
+        self.pageView = [[PageView alloc] initWithFrame:presenter.view.frame spine:spine index:index];
         self.pageView.backgroundColor = [UIColor blueColor];
-        [presenter addSubview:self.pageView];
+        [presenter.view addSubview:self.pageView];
         
         self.pageView.previous = [[PageView alloc] init];
         self.pageView.previous.backgroundColor = [UIColor redColor];
         [self moveViewLeft:self.pageView.previous RelativeToView:self.pageView];
-        [presenter addSubview:self.pageView.previous];
+        [presenter.view addSubview:self.pageView.previous];
         
         self.pageView.next = [[PageView alloc] init];
         self.pageView.next.backgroundColor = [UIColor greenColor];
         [self moveViewToRight:self.pageView.next RelativeToView:self.pageView];
-        [presenter addSubview:self.pageView.next];
+        [presenter.view addSubview:self.pageView.next];
         
         if (index > 0) {
             [self.pageView.previous setURLFromSpine:spine index:index - 1];
@@ -47,12 +52,15 @@ static const float kPageTurnTime = 0.25;
         if (index < spine.count - 1) {
             [self.pageView.next setURLFromSpine:spine index:index + 1];
         }
+        
+        [self.presenter updatePercent:(float)index / (float)spine.count];
     }
     return self;
 }
 
 - (void)loadPageFromSpine:(NSArray *)spine AtIndex:(NSInteger)index {
     self.spine = spine;
+    [self.presenter updatePercent:(float)index / (float)spine.count];
     [self.pageView setURLFromSpine:spine index:index];
     if (index > 0) {
         [self.pageView.previous setURLFromSpine:spine index:index - 1];
@@ -89,6 +97,8 @@ static const float kPageTurnTime = 0.25;
                 self.pageView = left;
                 self.pageView.previous = right;
                 self.pageView.next = center;
+                
+                [self.presenter updatePercent:self.pageView.spineIndex / (float)self.spine.count];
             }];
             break;
         }
@@ -125,10 +135,9 @@ static const float kPageTurnTime = 0.25;
                     if (right.spineIndex + 1 < self.spine.count - 1) {
                         [self.pageView.next setURLFromSpine:self.spine index:right.spineIndex + 1];
                     }
-
+                    [self.presenter updatePercent:self.pageView.spineIndex / (float)self.spine.count];
+                    
                 });
-
-                
             }];
             break;
         }
@@ -154,6 +163,15 @@ static const float kPageTurnTime = 0.25;
     CGRect frame = pageView_r.frame;
     frame.origin.x -= CGRectGetWidth(frame);
     pageView.frame = frame;
+}
+
+#pragma mark - SliderNavigation
+//-------------------------------------------------
+// SliderNavigation
+//-------------------------------------------------
+
+- (void)loadAtPercent:(float)percent {
+    [self loadPageFromSpine:self.spine AtIndex:percent * (self.spine.count - 1)];
 }
 
 @end

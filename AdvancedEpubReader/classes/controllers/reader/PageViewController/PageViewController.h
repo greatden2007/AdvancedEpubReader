@@ -16,13 +16,19 @@ typedef enum : NSUInteger {
     PageScrollDirectionLeft
 } PageScrollDirection;
 
+@protocol TableOfContentsDelegate, SliderNavigationDelegate;
+
 @interface PageViewController : NSObject
 
-- (instancetype)initWithSpine:(NSArray *)spine index:(NSInteger)index presenter:(UIView *)presenter;
+- (instancetype)initWithSpine:(NSArray *)spine index:(NSInteger)index presenter:(UIViewController <TableOfContentsDelegate, SliderNavigationDelegate> *)presenter;
 
 // Открывает страницу по индексу из spine, а так же соседние
 - (void)loadPageFromSpine:(NSArray *)spine AtIndex:(NSInteger)index;
 
+// переворачивает страницу в заданном направлении
 - (void)turnPage:(PageScrollDirection)direction;
+
+// открывает книгу на заданном проценте
+- (void)loadAtPercent:(float)percent;
 
 @end
