@@ -55,6 +55,7 @@
                             <constraint firstAttribute="trailing" secondItem="L6W-R7-c6Z" secondAttribute="trailing" id="fM3-3Z-pZy"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="bottomMenu" destination="L6W-R7-c6Z" id="cvJ-B0-BjU"/>
@@ -85,6 +86,9 @@
                                     <constraint firstAttribute="width" constant="12" id="rhy-ch-JmK"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="ntG-nn-oEc" eventType="touchUpInside" id="K33-Ds-tC1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuI-jQ-yOr" userLabel="toc">
                                 <rect key="frame" x="104" y="14" width="22" height="22"/>
@@ -184,7 +188,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pgp-Yy-W0E" id="m8s-yD-BYX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вступление. О Красоте женщины." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-14-iVm">

@@ -26,7 +26,7 @@
 #import "MainBookInfoDelegate.h"
 #import "NavPoint.h"
 
-@interface ReaderController () <UIWebViewDelegate, UIGestureRecognizerDelegate, TableOfContentsDelegate, SliderNavigationDelegate, MainBookInfoDelegate>
+@interface ReaderController () <UIWebViewDelegate, UIGestureRecognizerDelegate, TableOfContentsDelegate, BottomMenuProtocol, SliderNavigationDelegate, MainBookInfoDelegate>
 
 @property NSInteger currentSpinePosition;
 @property (strong) Epub *epub;
@@ -191,5 +191,13 @@
     return self.epub.spine;
 }
 
+#pragma mark - Back button
+//-------------------------------------------------
+// Back button
+//-------------------------------------------------
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

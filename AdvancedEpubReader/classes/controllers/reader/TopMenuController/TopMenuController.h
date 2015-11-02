@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol TableOfContentsDelegate;
+@protocol TableOfContentsDelegate, BottomMenuProtocol;
 
 @interface TopMenuController : UIViewController
 
-@property (weak) UIViewController <TableOfContentsDelegate> *readerController;
+@property (weak) UIViewController <TableOfContentsDelegate, BottomMenuProtocol> *readerController;
 
 @end

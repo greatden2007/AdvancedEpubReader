@@ -10,6 +10,8 @@
 
 #import "TOCController.h"
 
+#import "TableOfContentsDelegate.h"
+
 @interface TopMenuController ()
 
 @end
@@ -38,6 +40,11 @@
             [tocvc setTocDelegate:self.readerController];
         }
     }
+}
+
+
+- (IBAction)back:(id)sender {
+    [self.readerController back];
 }
 
 

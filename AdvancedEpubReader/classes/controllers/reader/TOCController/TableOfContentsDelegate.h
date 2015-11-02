@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol BottomMenuProtocol <NSObject>
+
+- (void)back;
+
+@end
+
 @protocol TableOfContentsDelegate <NSObject>
 
 @required
