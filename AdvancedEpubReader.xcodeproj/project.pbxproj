@@ -475,6 +475,7 @@
 				92EC354C1BBC3D7A004C95D0 /* Frameworks */,
 				92EC354D1BBC3D7A004C95D0 /* Resources */,
 				CBE7BDA0FF4093A58D2CD03B /* Copy Pods Resources */,
+				471AAF292796616977B115CD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -494,6 +495,7 @@
 				92EC35651BBC3D7B004C95D0 /* Frameworks */,
 				92EC35661BBC3D7B004C95D0 /* Resources */,
 				E838B517B5AA566643967E31 /* Copy Pods Resources */,
+				EFC7729BFA81EE2C110A8A67 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -600,6 +602,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		471AAF292796616977B115CD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedEpubReader/Pods-AdvancedEpubReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		78618327BAD61DF57D40DFF8 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -643,6 +660,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedEpubReaderTests/Pods-AdvancedEpubReaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC7729BFA81EE2C110A8A67 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedEpubReaderTests/Pods-AdvancedEpubReaderTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F82081BC45CE018EEF445E9D /* Check Pods Manifest.lock */ = {

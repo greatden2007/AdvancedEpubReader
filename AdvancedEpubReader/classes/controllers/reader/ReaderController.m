@@ -139,7 +139,7 @@
 
 - (Epub *)loadEpubNamed:(NSString *)name {
     EpubLoader *loader = [EpubLoader new];
-    return [loader loadEpubNamed:@"test"];
+    return [loader loadEpubNamed:name];
 }
 
 
