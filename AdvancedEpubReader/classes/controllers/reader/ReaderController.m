@@ -28,6 +28,9 @@
 
 @interface ReaderController () <UIWebViewDelegate, UIGestureRecognizerDelegate, TableOfContentsDelegate, BottomMenuProtocol, SliderNavigationDelegate, MainBookInfoDelegate>
 
+// имя епаба для загрузки (юзается при инициализации в viewDidload)
+@property (copy) NSString *loadingEpubName;
+
 @property NSInteger currentSpinePosition;
 @property (strong) Epub *epub;
 
@@ -47,10 +50,10 @@
     
     self.currentSpinePosition = 0;
     
-    if (![self copyAndUnarchiveEpub]) {
+    if (![self copyAndUnarchiveEpubNamed:self.loadingEpubName]) {
         NSLog(@"Cannot copy or unarchive epub");
     }
-    self.epub = [self loadEpubNamed:@"test"];
+    self.epub = [self loadEpubNamed:self.loadingEpubName];
     
     self.pageVC = [[PageViewController alloc] initWithSpine:self.epub.spine index:0 presenter:self];
     
@@ -59,6 +62,10 @@
     
     [self addSwipeRecognizers];
     [self addTapRecognizer];
+}
+
+- (void)setEpubName:(NSString *)epubName {
+    self.loadingEpubName = epubName;
 }
 
 #pragma mark - Gesture Recognizers
@@ -121,11 +128,12 @@
 // Temp methods to load epub
 //-------------------------------------------------
 
-- (BOOL)copyAndUnarchiveEpub {
+- (BOOL)copyAndUnarchiveEpubNamed:(NSString *)epubName {
     BOOL success = NO;
-    NSError *error = nil;
-    success = [FileLoader copyFileFromBundleToDocuments:@"test.epub" error:error];
-    success &= [EpubUnarchiver unzipEpubNamed:@"test.epub"];
+//    NSError *error = nil;
+//    success = [FileLoader copyFileFromBundleToDocuments:[epubName stringByAppendingString:@".epub"] error:error];
+//    success &= [EpubUnarchiver unzipEpubNamed:[epubName stringByAppendingString:@".epub"]];
+    success = [EpubUnarchiver unzipEpubNamed:[epubName stringByAppendingString:@".epub"]];
     return success;
 }
 
@@ -197,6 +205,7 @@
 //-------------------------------------------------
 
 - (void)back {
+    [self.navigationController setNavigationBarHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -10,4 +10,9 @@
 
 @interface ReaderController : UIViewController
 
+// расчёт на вызов после viewDidLoad (например при инициализации через сториборд (initiateInitialViewController:))
+// при инициализации через segue такой метод не прокатит (можете допилить самостоятельно)
+// пока такой нужды нет
+- (void)setEpubName:(NSString *)epubName;
+
 @end

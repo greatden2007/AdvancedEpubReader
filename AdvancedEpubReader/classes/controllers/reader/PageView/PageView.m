@@ -44,6 +44,12 @@
     [webView stringByEvaluatingJavaScriptFromString:js];
 }
 
+// здесь будет проводиться поиск того, куда мы переходим внутри книги (по ссылке внутри книги)
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSLog(@"request: %@", request);
+    return YES;
+}
+
 - (void)setURLFromSpine:(NSArray *)spine index:(NSInteger)index  {
     self.spineIndex = index;
     [self loadRequest:[NSURLRequest requestWithURL:spine[index]]];
